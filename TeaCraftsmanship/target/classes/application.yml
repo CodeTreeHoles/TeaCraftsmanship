@@ -1,0 +1,40 @@
+#spring.application.name=TeaCraftsmanship
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hui_tea_ingenuity
+    username: root
+    password: root
+  mail:
+    host: smtp.163.com
+    username: whyhuitea@163.com
+    password: QIZGRTRGDBTLFCWB
+    port: 465
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+
+#   tuofengmingming
+#logging:
+#  level:
+#    root: DEBUG
+server:
+  port: 8081
